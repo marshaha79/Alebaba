@@ -1,182 +1,58 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alebaba.net</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #FFFFFF;
-            color: #232F3E;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #FF9900;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-        .section {
-            padding: 20px;
-            margin: 20px 0;
-        }
-        .section h2 {
-            font-size: 1.8em;
-            color: #FF9900;
-            margin-bottom: 10px;
-        }
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-        .product-card {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: center;
-            background-color: #f9f9f9;
-        }
-        .product-card img {
-            width: 100%;
-            height: auto;
-            max-height: 200px;
-        }
-        .product-card h3 {
-            font-size: 1.2em;
-            color: #232F3E;
-        }
-        .product-card p {
-            color: #555;
-            font-size: 1em;
-        }
-        .product-card .price {
-            font-size: 1.5em;
-            color: #FF9900;
-            margin: 10px 0;
-        }
-        .button {
-            background-color: #FF9900;
-            color: white;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-            text-align: center;
-            width: 100%;
-            margin-top: 10px;
-        }
-        .button:hover {
-            background-color: #e68a00;
-        }
-        .contact-form {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .contact-form button {
-            background-color: #FF9900;
-            color: white;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-        }
-        .contact-form button:hover {
-            background-color: #e68a00;
-        }
-    </style>
+    <title>Alebaba Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-<header>
-    <h1>Alebaba.net</h1>
-    <p>متجرك الإلكتروني المفضل للمنتجات الإلكترونية والعناية بالبشرة</p>
-</header>
+    <!-- هيدر الموقع -->
+    <header>
+        <div class="logo">Alebaba</div>
+        <input type="text" id="search" placeholder="ابحث عن منتج...">
+        <button onclick="searchProduct()">🔍 بحث</button>
+        <select id="currency" onchange="changeCurrency()">
+            <option value="usd">USD ($)</option>
+            <option value="eur">EUR (€)</option>
+        </select>
+        <select id="language" onchange="changeLanguage()">
+            <option value="ar">العربية</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="tr">Türkçe</option>
+        </select>
+        <a href="https://wa.me/+31644910120" class="whatsapp-button">تواصل واتساب</a>
+    </header>
 
-<div class="section">
-    <h2>المنتجات الإلكترونية</h2>
-    <div class="product-grid">
-        <!-- Example Product 1 -->
-        <div class="product-card">
-            <img src="product1.jpg" alt="منتج 1">
+    <!-- الأقسام -->
+    <nav>
+        <ul>
+            <li><a href="#electronics">الإلكترونيات</a></li>
+            <li><a href="#clothing">الملابس</a></li>
+            <li><a href="#beauty">العناية الشخصية</a></li>
+            <li><a href="#home">أدوات منزلية</a></li>
+        </ul>
+    </nav>
+
+    <!-- قسم المنتجات -->
+    <section id="products">
+        <h2 id="electronics">📱 الإلكترونيات</h2>
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="منتج 1">
             <h3>هاتف ذكي</h3>
-            <p>هاتف ذكي عالي الأداء مع شاشة كبيرة وكاميرا مميزة.</p>
-            <div class="price">$500</div>
-            <button class="button">شراء الآن</button>
+            <p class="price">$500</p>
+            <button class="buy-button">شراء</button>
         </div>
-        <!-- Example Product 2 -->
-        <div class="product-card">
-            <img src="product2.jpg" alt="منتج 2">
-            <h3>سماعات بلوتوث</h3>
-            <p>سماعات بلوتوث عالية الجودة مع عزل للضوضاء.</p>
-            <div class="price">$80</div>
-            <button class="button">شراء الآن</button>
-        </div>
-        <!-- Example Product 3 -->
-        <div class="product-card">
-            <img src="product3.jpg" alt="منتج 3">
-            <h3>شاحن سريع</h3>
-            <p>شاحن سريع يناسب جميع الأجهزة الذكية.</p>
-            <div class="price">$30</div>
-            <button class="button">شراء الآن</button>
-        </div>
-    </div>
-</div>
+        <!-- أضف 9 منتجات أخرى بنفس التنسيق -->
+    </section>
 
-<div class="section">
-    <h2>منتجات العناية بالبشرة</h2>
-    <div class="product-grid">
-        <!-- Example Skin Care Product 1 -->
-        <div class="product-card">
-            <img src="skincare1.jpg" alt="منتج 1">
-            <h3>كريم ترطيب</h3>
-            <p>كريم ترطيب يومي للبشرة الجافة مع مكونات طبيعية.</p>
-            <div class="price">$25</div>
-            <button class="button">شراء الآن</button>
-        </div>
-        <!-- Example Skin Care Product 2 -->
-        <div class="product-card">
-            <img src="skincare2.jpg" alt="منتج 2">
-            <h3>سيروم فيتامين C</h3>
-            <p>سيروم غني بفيتامين C لتفتيح البشرة وتحفيز التجدد.</p>
-            <div class="price">$45</div>
-            <button class="button">شراء الآن</button>
-        </div>
-        <!-- Example Skin Care Product 3 -->
-        <div class="product-card">
-            <img src="skincare3.jpg" alt="منتج 3">
-            <h3>غسول وجه</h3>
-            <p>غسول وجه مهدئ للبشرة الحساسة والمنظف العميق.</p>
-            <div class="price">$20</div>
-            <button class="button">شراء الآن</button>
-        </div>
-    </div>
-</div>
+    <!-- Footer -->
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2025 Alebaba.net</p>
+    </footer>
 
-<div class="section">
-    <h2>اتصل بنا</h2>
-    <div class="contact-form">
-        <h3>لأي استفسار أو طلب، تواصل معنا الآن</h3>
-        <form action="#" method="POST">
-            <input type="text" name="name" placeholder="اسمك" required>
-            <input type="email" name="email" placeholder="البريد الإلكتروني" required>
-            <textarea name="message" rows="4" placeholder="رسالتك" required></textarea>
-            <button type="submit">إرسال</button>
-        </form>
-        <p>أو يمكنك الاتصال بنا على الرقم: <strong>+31644910120</strong></p>  <!-- أضف رقمك هنا -->
-    </div>
-</div>
 </body>
 </html>
