@@ -1,0 +1,96 @@
+/* الأساسيات */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.product {
+    display: inline-block;
+    width: 23%;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#paypal-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* رابط واتساب */
+#contact a {
+    text-decoration: none;
+    color: #25D366;
+    font-weight: bold;
+}
+
+/* التوسيع لأقسام المنتجات */
+.product-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* تغيير اللغة */
+#language-selector {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
