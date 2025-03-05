@@ -1,58 +1,0 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alebaba Store</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-</head>
-<body>
-
-    <!-- هيدر الموقع -->
-    <header>
-        <div class="logo">Alebaba</div>
-        <input type="text" id="search" placeholder="ابحث عن منتج...">
-        <button onclick="searchProduct()">🔍 بحث</button>
-        <select id="currency" onchange="changeCurrency()">
-            <option value="usd">USD ($)</option>
-            <option value="eur">EUR (€)</option>
-        </select>
-        <select id="language" onchange="changeLanguage()">
-            <option value="ar">العربية</option>
-            <option value="en">English</option>
-            <option value="es">Español</option>
-            <option value="tr">Türkçe</option>
-        </select>
-        <a href="https://wa.me/+31644910120" class="whatsapp-button">تواصل واتساب</a>
-    </header>
-
-    <!-- الأقسام -->
-    <nav>
-        <ul>
-            <li><a href="#electronics">الإلكترونيات</a></li>
-            <li><a href="#clothing">الملابس</a></li>
-            <li><a href="#beauty">العناية الشخصية</a></li>
-            <li><a href="#home">أدوات منزلية</a></li>
-        </ul>
-    </nav>
-
-    <!-- قسم المنتجات -->
-    <section id="products">
-        <h2 id="electronics">📱 الإلكترونيات</h2>
-        <div class="product">
-            <img src="https://via.placeholder.com/150" alt="منتج 1">
-            <h3>هاتف ذكي</h3>
-            <p class="price">$500</p>
-            <button class="buy-button">شراء</button>
-        </div>
-        <!-- أضف 9 منتجات أخرى بنفس التنسيق -->
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>جميع الحقوق محفوظة &copy; 2025 Alebaba.net</p>
-    </footer>
-
-</body>
-</html>
